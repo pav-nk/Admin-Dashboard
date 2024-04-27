@@ -1,2 +1,99 @@
+font-size = 1rem
+color-1 = #222831
+color-2 = #393E46
+color-3 = #00ADB5
+color-4 = #EEEEEE
+color-5 = #E84545
+
+@font-face
+    font-family Roboto
+    font-style normal
+    src url("fonts/Roboto-Regular.woff2")
+
+@font-face
+    font-family Roboto-Italic
+    font-style normal
+    src url("fonts/Roboto-Italic.woff2")
+
+html 
+    font-size 10px
+
 body
-    background: red
+    font-size 1.6rem
+    font-family Roboto, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
+    color color-4
+    background-color color-4
+
+a
+    text-decoration none
+    color color-4
+
+ul
+    list-style-type none
+    margin 0
+    padding 0
+
+.link
+    font-size 2.2rem
+    transition .3s color ease-in
+    display block
+    &--github
+        padding-left 50px
+        background transparent url("./icons/github.svg") left center / contain no-repeat
+        &:hover
+            color color-3
+
+
+.wrapper
+    display grid
+    grid-template-columns: clamp(250px, 25%, 550px) minmax(500px, 1fr)
+    height 100vh
+
+.sidebar
+    background-color color-2
+    padding 45px
+    display grid
+    grid-template-rows 1fr auto
+    &__main .logo
+        margin-bottom: 60px
+
+.logo
+    display: block
+    font-size 5rem
+    font-weight bold
+    padding-left 80px
+    background transparent url("./icons/dashboard.svg") left center / 70px no-repeat
+
+.navigation
+    cursor pointer
+    &__items
+        display flex
+        flex-direction column
+        gap 20px
+    &__item
+        font-size 2.2rem
+        padding-left 50px
+        transition .3s color ease-in
+        &:hover, &:focus, &:active
+            color color-3
+        &--home
+            background transparent url("./icons/home.svg") left center / contain no-repeat
+        &--profile
+            background transparent url("./icons/profile.svg") left center / contain no-repeat
+        &--messages
+            background transparent url("./icons/message.svg") left center / contain no-repeat
+        &--history
+            background transparent url("./icons/history.svg") left center / contain no-repeat
+        &--tasks
+            background transparent url("./icons/tasks.svg") left center / contain no-repeat
+        &--communities
+            background transparent url("./icons/communities.svg") left center / contain no-repeat
+        &--settings
+            background transparent url("./icons/settings.svg") left center / contain no-repeat
+        &--support
+            background transparent url("./icons/support.svg") left center / contain no-repeat
+        &--privacy
+            background transparent url("./icons/privacy.svg") left center / contain no-repeat
+
+

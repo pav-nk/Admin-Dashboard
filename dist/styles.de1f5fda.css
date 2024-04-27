@@ -1,0 +1,109 @@
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  src: url("Roboto-Regular.d2584ee6.woff2");
+}
+@font-face {
+  font-family: Roboto-Italic;
+  font-style: normal;
+  src: url("Roboto-Italic.4e0fc0d4.woff2");
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.6rem;
+  font-family: Roboto, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: #eee;
+  background-color: #eee;
+}
+a {
+  text-decoration: none;
+  color: #eee;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.link {
+  font-size: 2.2rem;
+  transition: 0.3s color ease-in;
+  display: block;
+}
+.link--github {
+  padding-left: 50px;
+  background: transparent url("github.60929d30.svg") left center/contain no-repeat;
+}
+.link--github:hover {
+  color: #00adb5;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: clamp(250px, 25%, 550px) minmax(500px, 1fr);
+  height: 100vh;
+}
+.sidebar {
+  background-color: #393e46;
+  padding: 45px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+.sidebar__main .logo {
+  margin-bottom: 60px;
+}
+.logo {
+  display: block;
+  font-size: 5rem;
+  font-weight: bold;
+  padding-left: 80px;
+  background: transparent url("dashboard.7e71ba6a.svg") left center/70px no-repeat;
+}
+.navigation {
+  cursor: pointer;
+}
+.navigation__items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.navigation__item {
+  font-size: 2.2rem;
+  padding-left: 50px;
+  transition: 0.3s color ease-in;
+}
+.navigation__item:hover,
+.navigation__item:focus,
+.navigation__item:active {
+  color: #00adb5;
+}
+.navigation__item--home {
+  background: transparent url("home.8951c294.svg") left center/contain no-repeat;
+}
+.navigation__item--profile {
+  background: transparent url("profile.2b2c1b83.svg") left center/contain no-repeat;
+}
+.navigation__item--messages {
+  background: transparent url("message.b433d0b7.svg") left center/contain no-repeat;
+}
+.navigation__item--history {
+  background: transparent url("history.9c5112e4.svg") left center/contain no-repeat;
+}
+.navigation__item--tasks {
+  background: transparent url("tasks.3845a7a3.svg") left center/contain no-repeat;
+}
+.navigation__item--communities {
+  background: transparent url("communities.debf4f37.svg") left center/contain no-repeat;
+}
+.navigation__item--settings {
+  background: transparent url("settings.97a31608.svg") left center/contain no-repeat;
+}
+.navigation__item--support {
+  background: transparent url("support.e26d638c.svg") left center/contain no-repeat;
+}
+.navigation__item--privacy {
+  background: transparent url("privacy.0c49c77d.svg") left center/contain no-repeat;
+}
+
+
+/*# sourceMappingURL=/styles.de1f5fda.css.map */

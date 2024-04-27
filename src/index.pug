@@ -5,9 +5,24 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="./reset.styl")
         link(rel="stylesheet", href="./styles.styl")
-        link(rel="shortcut icon", href="./icons/layout.svg", type="image/x-icon")
+        link(rel="shortcut icon", href="icons/dashboard.svg", type="image/x-icon")
         title Admin-Dashboard
     body
         .wrapper
             section.sidebar
+                .sidebar__main
+                    a.logo(href="http://") Dashboard
+                    nav.navigation
+                        ul.navigation__items
+                            li.navigation__item.navigation__item--home Home
+                            li.navigation__item.navigation__item--profile Profile
+                            li.navigation__item.navigation__item--messages Messages
+                            li.navigation__item.navigation__item--history History
+                            li.navigation__item.navigation__item--tasks Tasks
+                            li.navigation__item.navigation__item--communities Communities
+                            li.navigation__item.navigation__item--settings Settings
+                            li.navigation__item.navigation__item--support Support
+                            li.navigation__item.navigation__item--privacy Privacy
+                .sidebar__footer
+                    a.link.link--github(href="https://github.com/pav-nk", target="_blank", rel="noopener noreferrer") Github
             section.main
