@@ -23,7 +23,7 @@ body
     font-family Roboto, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
     color color-4
-    background-color color-4
+    background-color color-2
 
 a
     text-decoration none
@@ -35,10 +35,10 @@ ul
     padding 0
 
 .link
-    font-size 2.2rem
     transition .3s color ease-in
     display block
     &--github
+        font-size 2rem
         padding-left 50px
         background transparent url("./icons/github.svg") left center / contain no-repeat
         &:hover
@@ -47,20 +47,20 @@ ul
 
 .wrapper
     display grid
-    grid-template-columns: clamp(250px, 25%, 550px) minmax(500px, 1fr)
     height 100vh
+    grid-template-columns: clamp(350px, 20%, 700px) minmax(700px, 1fr)
 
 .sidebar
-    background-color color-2
-    padding 45px
+    background-color color-1
+    padding 20px
     display grid
     grid-template-rows 1fr auto
     &__main .logo
-        margin-bottom: 60px
+        margin-bottom: 50px
 
 .logo
     display: block
-    font-size 5rem
+    font-size 4rem
     font-weight bold
     padding-left 80px
     background transparent url("./icons/dashboard.svg") left center / 70px no-repeat
@@ -70,10 +70,10 @@ ul
     &__items
         display flex
         flex-direction column
-        gap 20px
+        gap 15px
     &__item
-        font-size 2.2rem
-        padding-left 50px
+        font-size 2rem
+        padding-left 45px
         transition .3s color ease-in
         &:hover, &:focus, &:active
             color color-3
@@ -95,5 +95,170 @@ ul
             background transparent url("./icons/support.svg") left center / contain no-repeat
         &--privacy
             background transparent url("./icons/privacy.svg") left center / contain no-repeat
+        &:nth-child(6)
+            margin-bottom 20px
 
+.main
+    display grid
+    grid-template-rows 180px 1fr
 
+.header
+    display grid
+    padding 15px
+    gap 15px
+    grid-template repeat(2, 1fr) / 2fr 1fr
+    grid-template-areas "form profile" "user menu"
+    &__form
+        grid-area form
+        display flex
+        align-items center
+    &__profile
+        grid-area profile
+        display flex
+        gap 25px
+        align-items center
+        justify-content center
+    &__user
+        display flex
+        grid-area user
+        gap 15px
+        align-items center
+    &__menu
+        grid-area menu
+        display grid
+        grid-template-columns repeat(3, 1fr)
+        gap 15px
+        align-items center
+        cursor pointer
+
+.form
+    display flex
+    padding-left 60px
+    flex 1
+    background transparent url("./icons/search.svg") left center / contain no-repeat
+
+.search-field
+    flex 1
+    padding 8px
+    border 2px solid color-1
+    outline none
+    font-size 2rem
+    border-radius 5px
+
+.icon
+    display block
+    width 32px
+    height 32px
+    cursor pointer
+    &--profile
+        background url("./icons/notifications.svg") center / contain no-repeat
+    &--star
+        background url("./icons/star.svg") center / contain no-repeat
+    &--branch
+        background url("./icons/branch.svg") center / contain no-repeat
+    &--eye
+        background url("./icons/eye.svg") center / contain no-repeat
+
+.avatar
+    &--sm
+        width 40px
+        height 40px
+    &--md
+        width 50px
+        height 50px
+
+.name
+    font-weight bold
+    &--md
+        font-size 2rem
+
+.button
+    display block
+    border-radius 10px
+    background color-3
+    outline none
+    border 3px solid color-1
+    padding 8px 28px
+    font-size 2rem
+    color: color-4
+    cursor pointer
+    transition .3s box-shadow ease-in
+    &:hover, &:active
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+.content
+    display grid
+    padding 15px
+    gap: 15px
+    grid-template repeat(2, 1fr) / 2fr 1fr
+    grid-template-areas "projects announcements" "projects trending"
+
+.projects
+    grid-area projects
+    gap 15px
+    display grid
+    grid-template-rows auto 1fr
+    &__field
+        display grid
+        grid-template-columns repeat(auto-fill, minmax(350px, 1fr))
+        gap 15px
+
+.announcements
+    grid-area announcements
+
+.trending
+    grid-area trending
+
+.card
+    padding 10px
+    border-radius 10px
+    background-color color-1
+    border 3px solid color-3
+    display grid
+    grid-template-rows 40px 1fr 40px
+    gap 5px
+    box-shadow rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px
+    &__title
+        font-weight bold
+    &__navigation
+        display flex
+        justify-content flex-end
+        gap 15px
+        align-items center
+
+.announcements
+    display flex
+    flex-direction column
+    gap 15px
+    &__items
+        box-shadow rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px
+        display grid
+        gap 15px
+        padding 10px
+        border-radius 10px
+        background-color color-1
+        border 3px solid color-3
+    &__item
+        padding-bottom 15px
+        border-bottom 1px solid color-2
+        &:last-child
+            padding-bottom none
+            border-bottom none
+
+.trending
+    display flex
+    flex-direction column
+    gap 15px
+    &__items
+        box-shadow rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px
+        display grid
+        gap 10px
+        padding 10px
+        border-radius 10px
+        background-color color-1
+        border 3px solid color-3
+    &__item
+        display grid
+        grid-template-columns 40px 1fr
+        gap 15px
+        align-items center
